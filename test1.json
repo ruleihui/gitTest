@@ -1,14 +1,31 @@
-ew0KICAgICAgICAgICJsb2ciOiB7DQogICAgICAgICAgICAiYWNjZXNzIjogIm5vbmUiLA0KICAg
-ICAgICAgICAgImxvZ2xldmVsIjogImVycm9yIg0KICAgICAgICAgIH0sDQogICAgICAgICAgImlu
-Ym91bmRzIjogWw0KICAgICAgICAgICAgew0KICAgICAgICAgICAgICAicG9ydCI6ICRQT1JULA0K
-ICAgICAgICAgICAgICAicHJvdG9jb2wiOiAidmxlc3MiLA0KICAgICAgICAgICAgICAic2V0dGlu
-Z3MiOiB7DQogICAgICAgICAgICAgICAgImRlY3J5cHRpb24iOiAibm9uZSIsDQogICAgICAgICAg
-ICAgICAgImNsaWVudHMiOiBbDQogICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAg
-ICAgICJpZCI6ICJmYzVlMTJiMi1jYzUxLTNlYmYtYTljNC03ZWUwMzk5MGZmYzIiDQogICAgICAg
-ICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgXQ0KICAgICAgICAgICAgICB9LA0KICAgICAg
-ICAgICAgICAic3RyZWFtU2V0dGluZ3MiOiB7DQogICAgICAgICAgICAgICAgIm5ldHdvcmsiOiJ3
-cyIsDQogICAgICAgICAgICAgICAgIndzU2V0dGluZ3MiOiB7DQogICAgICAgICAgICAgICAgICAi
-cGF0aCI6ICIke1YyX1dTX1BBVEhfVkxFU1N9Ig0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAg
-ICAgICAgfQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgIF0sDQogICAgICAgICAgIm91dGJvdW5k
-cyI6IFsNCiAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgInByb3RvY29sIjogImZyZWVkb20i
-DQogICAgICAgICAgICB9DQogICAgICAgICAgXQ0KICAgICAgICB9
+{
+          "log": {
+            "access": "none",
+            "loglevel": "error"
+          },
+          "inbounds": [
+            {
+              "port": $PORT,
+              "protocol": "vless",
+              "settings": {
+                "decryption": "none",
+                "clients": [
+                  {
+                    "id": "fc5e12b2-cc51-3ebf-a9c4-7ee03990ffc2"
+                  }
+                ]
+              },
+              "streamSettings": {
+                "network":"ws",
+                "wsSettings": {
+                  "path": "${V2_WS_PATH_VLESS}"
+                }
+              }
+            }
+          ],
+          "outbounds": [
+            {
+              "protocol": "freedom"
+            }
+          ]
+        }

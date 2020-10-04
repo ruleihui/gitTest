@@ -1,31 +1,33 @@
 {
-          "log": {
-            "access": "none",
-            "loglevel": "error"
-          },
-          "inbounds": [
-            {
-              "port": $PORT,
-              "protocol": "vless",
-              "settings": {
-                "decryption": "none",
+    "log": {
+        "access": "none",
+        "loglevel": "error"
+    },
+    "inbounds": [
+        {
+            "port": $PORT,
+            "protocol": "vless",
+            "settings": {
                 "clients": [
-                  {
-                    "id": "fc5e12b2-cc51-3ebf-a9c4-7ee03990ffc2"
-                  }
-                ]
-              },
-              "streamSettings": {
-                "network":"ws",
+                    {
+                        "id": "$UUID",
+                        "level": 0
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
                 "wsSettings": {
-                  "path": "${V2_WS_PATH_VLESS}"
+                    "path": "/path"
                 }
-              }
             }
-          ],
-          "outbounds": [
-            {
-              "protocol": "freedom"
-            }
-          ]
         }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
